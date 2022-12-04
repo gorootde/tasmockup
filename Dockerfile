@@ -9,7 +9,7 @@ VOLUME [ "/data" ]
 RUN apk add --no-cache python3 py3-pip bash && pip install decode-config
 
 COPY backup.sh /usr/local/bin/
-RUN chmod +x /usr/local/bin/backup.sh && mkdir /data
+RUN chmod +x /usr/local/bin/backup.sh 
 
 COPY setupcron.sh /usr/local/bin/
 RUN chmod +x /usr/local/bin/setupcron.sh
